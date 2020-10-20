@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WinLose">
+
+    <TextView
+        android:id="@+id/tvWin"
+        android:gravity="center"
+        android:text="WIN"
+        android:background="@android:color/holo_green_light"
+        android:textSize="72sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></TextView>
+
+    <TextView
+        android:id="@+id/tvLose"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:text="LOSE"
+        android:background="@android:color/holo_red_dark"
+        android:textSize="72sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></TextView>
+</FrameLayout>
