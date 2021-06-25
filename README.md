@@ -7,4 +7,4 @@ Mobile Actvity
 
 > Exemplo: 
   >> (N = 50)
-  > [49, N, 51]  
+  >> [49, N, 51]  
