@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="467dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center">
         <TextView
@@ -18,10 +18,9 @@
     </LinearLayout>
 
     <FrameLayout
-        android:layout_weight="1"
+        android:layout_weight="0.3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <Button
             android:id="@+id/btStart"
             android:visibility="visible"
@@ -39,22 +38,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="[1..100]"
+
             android:textColor="@android:color/black">
         </TextView>
     </FrameLayout>
-
-    <EditText
-        android:id="@+id/etResposta"
-        android:gravity="bottom"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Put the Number Here">
-    </EditText>
-    <Button
-        android:id="@+id/btResponder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Responder"
-        android:background="@android:color/holo_green_light">
-    </Button>
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etResposta"
+            android:gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Put the Number Here">
+        </EditText>
+        <Button
+            android:id="@+id/btResponder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Responder"
+            android:background="@android:color/holo_green_light">
+        </Button>
+    </LinearLayout>
 </LinearLayout>

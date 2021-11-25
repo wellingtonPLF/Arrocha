@@ -34,24 +34,29 @@ class MainActivity : AppCompatActivity() {
         })
 
         this.btResponder.setOnClickListener{
-            var resposta = this.etResposta.text.toString().toInt()
-            this.etResposta.getText().clear()
-            if(resposta == this.numeroAleatorio.getnumber() || resposta <= this.numeroAleatorio.getInicio() || resposta >= this.numeroAleatorio.getFim()){
-                winLose("Perdeu")
-                atualiza()
-            }
-            else if(this.numeroAleatorio.getnumber() < resposta){
-                this.numeroAleatorio.setFim(resposta)
-                this.tvTitle.text = this.numeroAleatorio.getIntervalo()
-            }
-            else{
-                this.numeroAleatorio.setInicio(resposta)
-                this.tvTitle.text = this.numeroAleatorio.getIntervalo()
+            try{
+                var resposta = this.etResposta.text.toString().toInt()
+                this.etResposta.getText().clear()
+                if(resposta == this.numeroAleatorio.getnumber() || resposta <= this.numeroAleatorio.getInicio() || resposta >= this.numeroAleatorio.getFim()){
+                    winLose("Perdeu")
+                    atualiza()
+                }
+                else if(this.numeroAleatorio.getnumber() < resposta){
+                    this.numeroAleatorio.setFim(resposta)
+                    this.tvTitle.text = this.numeroAleatorio.getIntervalo()
+                }
+                else{
+                    this.numeroAleatorio.setInicio(resposta)
+                    this.tvTitle.text = this.numeroAleatorio.getIntervalo()
 
+                }
+                if(this.numeroAleatorio.dif() == 2){
+                    winLose("Ganhou")
+                    atualiza()
+                }
             }
-            if(this.numeroAleatorio.dif() == 2){
-                winLose("Ganhou")
-                atualiza()
+            catch (e: Exception){
+                Log.i("APP_ARROCHA", "Error")
             }
         }
     }
